@@ -1,0 +1,314 @@
+@import url('https://fonts.googleapis.com/css2?family=Arima:wght@100..700&family=Cinzel+Decorative:wght@400;700;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Encabezado */
+@import url('https://fonts.googleapis.com/css2?family=Arima:wght@100..700&family=Cinzel+Decorative:wght@400;700;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400&display=swap');
+header {
+	font-family: 'Cinzel Decorative', sans-serif;
+}
+
+body {
+	/* font-family: Arial, sans-serif; */
+	background-color: #f8f9fa;
+	margin: 0;
+	padding: 20px;
+	/* background-image: url('/utils/Web.png'), url('/utils/Web.png'),  url('/utils/Web.png') ;
+	background-repeat: repeat-y;  */
+	/* background-position: left; */
+	
+	margin: 0;
+}
+
+.cinzel-decorative-regular {
+	font-family: 'Cinzel Decorative', serif;
+	font-weight: 400;
+	font-style: normal;
+}
+
+/* .small-caps {
+    font-variant: small-caps;
+} */
+
+.cinzel-decorative-bold {
+	font-family: 'Cinzel Decorative', serif;
+	font-weight: 500;
+	font-style: normal;
+}
+
+.cinzel-decorative-black {
+	font-family: 'Cinzel Decorative', serif;
+	font-weight: 600;
+	font-style: normal;
+}
+
+/* ----------------------------------------------------Estilos generales para el header -----------------------------------------------*/
+/* Estilos para el contenedor del header */
+.header {
+	padding: 1px 0;
+	margin: 0;
+	height: 60px;
+	background-color: #f4f4f4;
+	border-bottom: 1px solid #ddd;
+	
+	/* imagen de lado */
+}
+
+/* .header-bg-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    z-index: 0;
+} */
+
+/* Estilos para el contenedor del menú */
+.header-menu {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 20px;
+}
+
+/* Estilos para el logo a la izquierda */
+
+.logoImg img {
+	width: 35%;
+	height: 35%;
+	margin-left: 10px;
+}
+
+/* boton de descarga */
+.btnCronica img {
+	width: 250px;
+	height: 100px;
+}
+/* Estilos para la barra de navegación a la derecha */
+
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+    gap: 15px;
+}
+
+.navbar ul li {
+    display: inline-block;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+/* Hover solo aplica si NO está activo */
+.navbar ul li a:not(.active):hover {
+    color: #000000;
+}
+
+/* Estado activo (más específico para evitar sobrescritura) */
+.navbar ul li.active a,
+.navbar ul li a.active {
+    color: #000000 !important;  /* Negro cuando está seleccionado */
+    font-weight: bold;
+    /* Si quieres un fondo destacado, descomenta: */
+    /* background-color: #ffe4b5; */
+    /* padding: 5px 10px; */
+    /* border-radius: 4px; */
+}
+
+
+/* Estilos para el contenedor del contenido del header */
+.header-content {
+	width: 100%;
+	text-align: center;
+	padding: 0px 0; /* Ajusta el padding según sea necesario */
+	margin-top: 0; /* Elimina el margen superior */
+}
+
+/* Estilos para el título */
+.titleWelcome {
+	text-align: center;
+	margin-top: 0px; /* Ajusta el margen superior según sea necesario */
+}
+
+.titleWelcome h2 {
+	font-size: 30px;
+	color: black;
+	margin: 0;
+	font-family: 'Cinzel Decorative', serif;
+}
+
+/* Estilos para la sección de Morelos */
+.morelos {
+	padding: 40px 0;
+	/* background-color: #f4f4f4; */
+}
+
+.morelos-content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	max-width: 900px;
+	margin: 0 auto;
+}
+
+/* Estilos para el título */
+.h2-morelos {
+	font-size: 32px;
+	font-weight: bold;
+	margin-bottom: 20px;
+	color: #333;
+	font-family: 'Cinzel Decorative', sans-serif;
+}
+
+/* Estilos para centrar el iframe del mapa */
+iframe {
+	max-width: 100%;
+	width: 600px;
+	height: 550px;
+	border: none;
+	margin: 0 auto;
+	align-items: center;
+}
+
+/* ----------------------------------------------Estilos del footer---------------------------------- */
+.footer {
+	background-color: #606834;
+	color: white;
+	/* padding: 20px 0; */
+	text-align: center;
+	position: relative;
+
+	width: 100%;
+	min-height: 100px;
+}
+
+.footer-container {
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.footer-section {
+	margin: 5px 0;
+}
+
+.footer-section h4 {
+	margin-bottom: 5px;
+	font-size: 18px;
+}
+
+.footer-section p,
+.footer-section a {
+	font-size: 16px;
+	margin: 2px 0;
+	color: white;
+	text-decoration: none;
+}
+
+.footer-section a:hover {
+	text-decoration: underline;
+}
+
+.copyright {
+	margin-top: 10px;
+	font-size: 14px;
+	color: #bbb;
+}
+
+/* Estilos para centrar la sección y el texto  de todos los textos*/
+.text-section {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: justify;
+	max-width: 950px;
+	margin: 0 auto;
+	padding: 0 20px;
+	line-height: 1.6;
+	font-size: 16px;
+	
+}
+.text-section p {
+	margin-bottom: 10px;
+}
+.text-p-caslon {
+	color: #555;
+	margin-bottom: 35px;
+	
+}
+.versalitas {
+	font-family: 'Roboto Slab', serif; /* Usa la fuente con versalitas */
+	font-variant: small-caps; /* Aplica versalitas */
+}
+
+
+
+/* imagen principal zonas */
+.image-principal {
+	width: 600px; /* Ajusta el ancho de la imagen al 100% del contenedor */
+	height: 350px; /* Mantiene la proporción de la imagen */
+	border-radius: 10px; /* Bordes redondeados */
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra alrededor de la imagen */
+	margin: 20px 0; /* Espacio superior e inferior */
+	display: block; /* Asegura que la imagen se comporte como un bloque */
+
+	margin-left: auto; /* Centra la imagen horizontalmente */
+	margin-right: auto; /* Centra la imagen horizontalmente */
+}
+
+/* Estilos personalizados carousel  */
+
+
+.mi-carrusel {
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 20px;
+}
+
+.splide__slide {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #f0f0f0;
+	border-radius: 8px;
+	overflow: hidden;
+	height: 500px !important; /* Altura fija */
+	width: 800px !important;
+}
+
+.splide__slide img {
+	width: auto;
+	height: auto;
+	max-width: 100%;
+	max-height: 100%;
+	/*object-fit: contain;  Mantiene proporciones sin distorsión */
+	object-fit: cover; /*Recorta la imagen para llenar el espacio esto si cubre todo el espacio v2*/
+	object-position: center; /*Enfoca el centro de la imagen esto si cubre todo el espacio v2 */
+}
+
+.splide__arrows {
+	display: flex;
+	justify-content: center;
+	margin-top: 15px;
+}
+
+.splide__pagination {
+	bottom: -40px;
+}
