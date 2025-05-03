@@ -12,7 +12,7 @@ body {
 	/* font-family: Arial, sans-serif; */
 	background-color: #f8f9fa;
 	margin: 0;
-	padding: 20px;
+	padding: 0px;
 	/* background-image: url('/utils/Web.png'), url('/utils/Web.png'),  url('/utils/Web.png') ;
 	background-repeat: repeat-y;  */
 	/* background-position: left; */
@@ -44,14 +44,23 @@ body {
 
 /* ----------------------------------------------------Estilos generales para el header -----------------------------------------------*/
 /* Estilos para el contenedor del header */
-.header {
+/* .header {
 	padding: 1px 0;
 	margin: 0;
 	height: 60px;
 	background-color: #f4f4f4;
 	border-bottom: 1px solid #ddd;
 	
-	/* imagen de lado */
+} */
+.header {
+    padding: 1px 0;
+    margin: 0;
+    height: 60px;
+    background-color: #606834; /* Usando el color que definiste en el HTML */
+    border-bottom: 1px solid #ddd;
+    display: flex; /* Añade esto */
+    align-items: center; /* Centra verticalmente los elementos */
+    justify-content: center; /* Centra horizontalmente el contenido */
 }
 
 /* .header-bg-img {
@@ -64,40 +73,64 @@ body {
 
 /* Estilos para el contenedor del menú */
 .header-menu {
-	display: flex;
+	/* display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 0 20px;
+	padding: 0 20px; */
+	display: flex;
+    justify-content: space-between; /* Distribuye el espacio entre logo y nav */
+    align-items: center;
+    padding: 0 20px;
+    width: 100%; /* Ocupa todo el ancho disponible */
+    max-width: 1200px; /* Establece un ancho máximo si lo deseas */
 }
 
 /* Estilos para el logo a la izquierda */
+.logoImg {
+    display: flex;
+    align-items: center;
+}
 
 .logoImg img {
-	width: 35%;
-	height: 35%;
-	margin-left: 10px;
+    width: auto; /* Cambiado de 35% a auto para mejor control */
+    height: 40px; /* Altura fija para el logo */
+    margin-left: 0; /* Eliminamos el margen izquierdo */
 }
+/* .logoImg img {
+	 width: 35%;
+	height: 35%;
+	margin-left: 10px; 
+	
+} */
 
 /* boton de descarga */
-.btnCronica img {
+/* .btnCronica img {
 	width: 250px;
 	height: 100px;
-}
+} */
 /* Estilos para la barra de navegación a la derecha */
 
 .navbar {
     display: flex;
     justify-content: flex-end;
-    width: 100%;
+    /* width: 100%; */
+	width: auto;
 }
 
-.navbar ul {
+/* .navbar ul {
     list-style: none;
     display: flex;
     gap: 20px;
     margin: 0;
     padding: 0;
     gap: 15px;
+} */
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 15px; /* Un solo gap es suficiente */
+    margin: 0;
+    padding: 0;
 }
 
 .navbar ul li {
@@ -185,40 +218,75 @@ iframe {
 }
 
 /* ----------------------------------------------Estilos del footer---------------------------------- */
-.footer {
+/* .footer {
 	background-color: #606834;
 	color: white;
-	/* padding: 20px 0; */
+ padding: 20px 0; 
 	text-align: center;
 	position: relative;
 
 	width: 100%;
 	min-height: 100px;
+} */
+.footer {
+    background-color: #606834;
+    color: white;
+    text-align: left; /* Cambiado de center a left */
+    padding: 30px 0; /* Añadido más padding */
+    width: 100%;
 }
 
-.footer-container {
+/* .footer-container {
 	display: flex;
 	justify-content: space-around;
 	flex-wrap: wrap;
 	max-width: 1200px;
 	margin: 0 auto;
+} */
+
+.footer-container {
+    display: flex;
+    justify-content: flex-start; /* Cambiado de space-around a flex-start */
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px; /* Añadido padding lateral */
+    gap: 80px; /* Espacio entre secciones */
 }
 
-.footer-section {
+/* .footer-section {
 	margin: 5px 0;
 }
 
 .footer-section h4 {
 	margin-bottom: 5px;
 	font-size: 18px;
+} */
+
+.footer-section {
+    margin: 0; /* Eliminamos el margen anterior */
 }
 
-.footer-section p,
+.footer-section h4 {
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-family: 'Cinzel Decorative', serif;
+}
+
+/* .footer-section p,
 .footer-section a {
 	font-size: 16px;
 	margin: 2px 0;
 	color: white;
 	text-decoration: none;
+} */
+.footer-section p,
+.footer-section a {
+    font-size: 16px;
+    margin: 8px 0; /* Aumentado el margen vertical */
+    color: white;
+    text-decoration: none;
+    display: block; /* Hace que cada enlace ocupe su propia línea */
 }
 
 .footer-section a:hover {
@@ -229,6 +297,18 @@ iframe {
 	margin-top: 10px;
 	font-size: 14px;
 	color: #bbb;
+}
+
+/* Estilo para el enlace de Aviso Legal */
+.legal-link {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.legal-link:hover {
+    color: #f0f0f0;
+    text-decoration: underline;
 }
 
 /* Estilos para centrar la sección y el texto  de todos los textos*/
@@ -247,11 +327,18 @@ iframe {
 }
 .text-section p {
 	margin-bottom: 10px;
+	text-align: justify; /* Justifica el texto general */
+    text-align-last: left;
 }
 .text-p-caslon {
 	color: #555;
 	margin-bottom: 35px;
-	
+	text-align: justify; /* Asegura que todos los párrafos con esta clase estén justificados */
+    margin-bottom: 35px;
+    color: #555;
+    text-indent: 0; /* Elimina sangría inicial si la hay */
+    padding-left: 0; /* Elimina relleno izquierdo no deseado */
+    margin-left: 0; /* Elimina margen izquierdo no deseado */
 }
 .versalitas {
 	font-family: 'Roboto Slab', serif; /* Usa la fuente con versalitas */
@@ -282,11 +369,18 @@ iframe {
 	padding: 20px;
 }
 
+/* Estilos para el contenedor del slide */
+.slide-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
 .splide__slide {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background: #f0f0f0;
+	/* background: #f0f0f0; */
 	border-radius: 8px;
 	overflow: hidden;
 	height: 500px !important; /* Altura fija */
@@ -295,12 +389,23 @@ iframe {
 
 .splide__slide img {
 	width: auto;
-	height: auto;
+	/* height: auto; */
+	height: calc(100% - 50px); /* Restamos espacio para el pie de foto */
 	max-width: 100%;
 	max-height: 100%;
 	/*object-fit: contain;  Mantiene proporciones sin distorsión */
 	object-fit: cover; /*Recorta la imagen para llenar el espacio esto si cubre todo el espacio v2*/
 	object-position: center; /*Enfoca el centro de la imagen esto si cubre todo el espacio v2 */
+}
+/* Estilos para el pie de foto */
+.slide-caption {
+    text-align: center;
+    padding: 15px 0;
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 1.2rem;
+    /* color: #333;
+    background-color: rgba(255, 255, 255, 0.5); */
+    margin-top: auto; /* Esto lo coloca al final del contenedor */
 }
 
 .splide__arrows {
