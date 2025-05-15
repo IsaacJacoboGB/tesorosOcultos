@@ -401,7 +401,7 @@ iframe {
 .slide-caption {
     text-align: center;
     padding: 15px 0;
-    font-family: 'Cinzel Decorative', serif;
+    font-family: 'Adobe Caslon Pro', sans-serif;
     font-size: 1.2rem;
     /* color: #333;
     background-color: rgba(255, 255, 255, 0.5); */
@@ -417,3 +417,25 @@ iframe {
 .splide__pagination {
 	bottom: -40px;
 }
+
+
+.btn-arriba {
+    position: fixed;
+    bottom: 50px;    /* Más separación del fondo */
+    right: 50px;     /* Más separación del lado derecho */
+    width: 50px;     /* Más grande */
+    height: 50px;    /* Más grande */
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 8px; /* Bordes ligeramente redondeados */
+    font-size: 30px;    /* Flecha más grande */
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+  }
+
+  .btn-arriba:hover {
+    background-color: #606834;
+  }
