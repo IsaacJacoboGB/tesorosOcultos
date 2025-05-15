@@ -12,7 +12,7 @@ const footerHTML = `
 
         <!-- Redes Sociales y Aviso Legal -->
         <div class="footer-section social-media">
-            <h4><a href="https://dgsyti.edomex.gob.mx/legales" class="legal-link" target="_blank" rel="noopener noreferrer">Aviso Legal</a></h4>
+            <h4><a href="/html/avisoLegal.html" class="legal-link" target="_blank" rel="noopener noreferrer">Aviso Legal</a></h4>
             <!--
             <a href="https://www.facebook.com" target="_blank">Facebook</a>
             <a href="https://www.twitter.com" target="_blank">Twitter</a>
